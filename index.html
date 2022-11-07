@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
+    <title>Softcon Demo</title>
+
+</head>
+<body>
+    <header class="header" id="searching">
+        <div class="header-top">
+            <div class="wide">
+                <div class="main-header">
+                    <div class="header__logo">
+                        <img src="./assets/img/logo_vinuni_white.png" alt="" class="header_logo-img">
+                        <p class="header_logo-name">Softcon</p>   
+                    </div>
+                    
+                    <!-- Cần sửa thêm -->
+                    <div class="header__navbar">
+                        <div class="header__navbar-normal">
+                            <a href = "#searching" class="header__navbar-item border-choosen">MEDICAL DICTIONARY</a>
+                            <!-- <a class="header__navbar-item">HISTORY</a>          -->
+                        </div>
+                    </div>
+        
+                    <div class="header__weblang">
+                        <div class="header__weblang-item header__weblang-menu">
+                            <i class="header__weblang-menu-icon fas fa-bars"></i>
+                            <i class="header__weblang-globe-icon fas fa-globe"></i>
+                        </div>
+                      
+                        <div class="header__weblang-sub">
+                            <div class="header__weblang-sub-list">
+                                <input type="radio" hidden checked id="lang1" name="selection">
+                                <label for="lang1" class="header__weblang-sub-button">
+                                    <a href="index.html">English</a>
+                                </label>
+                                <input type="radio" hidden id="lang2" name="selection">
+                                <label for="lang2" class="header__weblang-sub-button">
+                                    <a href="index_vn.html">Vietnamese</a>
+                                </label> 
+                            </div>
+                        </div>
+                    </div>       
+                </div>       
+            </div>
+        </div>
+
+        <div class="header__dictlang">
+            <div class="header__dictlang-item" id="header__dictlang-en">
+                <h6 class="header__dictlang-item-title">English</h6>
+            </div>
+
+            <div class="header__dictlang-item" id="header__dictlang-vn">
+                <h6 class="header__dictlang-item-title">Vietnamese</h6>
+            </div> 
+            
+            <a class="header__dictlang-btn" href="javascript:SwapDivsWithClick()">
+                <i class="header__dictlang-btn-icon fas fa-right-left"></i>
+            </a>
+        </div>
+
+        <div class="header__search">
+            <h3 class="header__search__text">Start your search!</h5>
+            <div class="header__search__btn">
+                <i class="fas fa-search header__search__btn-icon"></i>
+                <input class="header__search__btn-text" type="text" placeholder="Enter your words">
+            </div>
+
+            <div class="header__search-result">
+                <a href="#" class="header__search-result-suggest">
+                    <i class="fas fa-search header__search__btn-icon"></i>
+                    acinic (adjective)
+                </a>
+                <a href="#" class="header__search-result-suggest">
+                    <i class="fas fa-search header__search__btn-icon"></i>
+                    Result
+                </a>
+                <a href="#" class="header__search-result-suggest">
+                    <i class="fas fa-search header__search__btn-icon"></i>
+                    Result
+                </a>
+                <a href="#" class="header__search-result-suggest">
+                    <i class="fas fa-search header__search__btn-icon"></i>
+                    Result
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-item section-search-result">
+        <div class="wide">
+            <h2 class="section-item__heading">Search Result</h2>
+            <div class="result-item">
+                <div class="result-item__term">
+                    <div class="result-item__term-header">
+                        <h1>acinic</h1>
+                       <i class="fa-solid fa-volume-high result-item__term-speaker"></i>
+                    </div>
+            
+                    <div class="result-item__term-attr">
+                        <span>adjective</span>
+                    </div>
+                </div>
+    
+                <div class="separation_line"></div>
+    
+                <div class="result-item__term">
+                    <div class="result-item__term-header">
+                        <h1>tuyến nang</h1>
+                       <i class="fa-solid fa-volume-high result-item__term-speaker"></i>
+                    </div>
+            
+                    <div class="result-item__term-attr">
+                        <span>tính từ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="section-item section-history">
+        <div class="wide">
+            <h2 class="section-item__heading">Recent searched terms</h2>
+            <div class="row section-history__row">
+                <div class="col">
+
+                    <div class="history-item history-item-searching">
+                        <div class="history-item-info">
+                            <h6 class="history-item-term">
+                                acinic
+                                <i class="fa-solid fa-volume-high history-item-speaker"></i>
+                            </h6>
+                            <span class="history-item-word-type">adjective</span>
+                        </div>
+                        <a class="history-item-expand">
+                            <i class="fa-solid fa-angles-down"></i>
+                        </a>
+                    </div>
+
+                    <div class="history-item history-item-meaning">
+                        <div class="history-item-info">
+                            <h6 class="history-item-term">
+                                tuyến nang
+                                <i class="fa-solid fa-volume-high history-item-speaker"></i>
+                            </h6>
+                            <span class="history-item-word-type">tính từ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+
+                    <div class="history-item history-item-searching">
+                        <div class="history-item-info">
+                            <h6 class="history-item-term">
+                                acinic
+                                <i class="fa-solid fa-volume-high history-item-speaker"></i>
+                            </h6>
+                            <span class="history-item-word-type">adjective</span>
+                        </div>
+                        <a class="history-item-expand">
+                            <i class="fa-solid fa-angles-down"></i>
+                        </a>
+                    </div>
+
+                    <div class="history-item history-item-meaning">
+                        <div class="history-item-info">
+                            <h6 class="history-item-term">
+                                tuyến nang
+                                <i class="fa-solid fa-volume-high history-item-speaker"></i>
+                            </h6>
+                            <span class="history-item-word-type">tính từ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+
+                    <div class="history-item history-item-searching">
+                        <div class="history-item-info">
+                            <h6 class="history-item-term">
+                                acinic
+                                <i class="fa-solid fa-volume-high history-item-speaker"></i>
+                            </h6>
+                            <span class="history-item-word-type">adjective</span>
+                        </div>
+                        <a class="history-item-expand">
+                            <i class="fa-solid fa-angles-down"></i>
+                        </a>
+                    </div>
+
+                    <div class="history-item history-item-meaning">
+                        <div class="history-item-info">
+                            <h6 class="history-item-term">
+                                tuyến nang
+                                <i class="fa-solid fa-volume-high history-item-speaker"></i>
+                            </h6>
+                            <span class="history-item-word-type">tính từ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row section-history__row">
+                <div class="col">
+
+                    <div class="history-item history-item-searching">
+                        <div class="history-item-info">
+                            <h6 class="history-item-term">
+                                acinic
+                                <i class="fa-solid fa-volume-high history-item-speaker"></i>
+                            </h6>
+                            <span class="history-item-word-type">adjective</span>
+                        </div>
+                        <a class="history-item-expand">
+                            <i class="fa-solid fa-angles-down"></i>
+                        </a>
+                    </div>
+
+                    <div class="history-item history-item-meaning">
+                        <div class="history-item-info">
+                            <h6 class="history-item-term">
+                                tuyến nang
+                                <i class="fa-solid fa-volume-high history-item-speaker"></i>
+                            </h6>
+                            <span class="history-item-word-type">tính từ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+
+                    <div class="history-item history-item-searching">
+                        <div class="history-item-info">
+                            <h6 class="history-item-term">
+                                acinic
+                                <i class="fa-solid fa-volume-high history-item-speaker"></i>
+                            </h6>
+                            <span class="history-item-word-type">adjective</span>
+                        </div>
+                        <a class="history-item-expand">
+                            <i class="fa-solid fa-angles-down"></i>
+                        </a>
+                    </div>
+
+                    <div class="history-item history-item-meaning">
+                        <div class="history-item-info">
+                            <h6 class="history-item-term">
+                                tuyến nang
+                                <i class="fa-solid fa-volume-high history-item-speaker"></i>
+                            </h6>
+                            <span class="history-item-word-type">tính từ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+
+                    <div class="history-item history-item-searching">
+                        <div class="history-item-info">
+                            <h6 class="history-item-term">
+                                acinic
+                                <i class="fa-solid fa-volume-high history-item-speaker"></i>
+                            </h6>
+                            <span class="history-item-word-type">adjective</span>
+                        </div>
+                        <a class="history-item-expand">
+                            <i class="fa-solid fa-angles-down"></i>
+                        </a>
+                    </div>
+
+                    <div class="history-item history-item-meaning">
+                        <div class="history-item-info">
+                            <h6 class="history-item-term">
+                                tuyến nang
+                                <i class="fa-solid fa-volume-high history-item-speaker"></i>
+                            </h6>
+                            <span class="history-item-word-type">tính từ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <footer class="footer-bot">
+        <!-- <div class="footer-info">
+            <div class="footer-connection">
+                <h3>Kết nối </h3>
+                <a class="github footer-social-icon" id="icon-github" href="#">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a class="email footer-social-icon" href="#">
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
+            </div>
+            <div class="col-md-7 footer-contact-email">
+                <h3>
+                    <i class="fa-regular fa-envelope"></i>For more information
+                </h3>
+                <form action="#" method="post">
+                    <input type="email" placeholder="Enter your email" name="email" required="">
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+            <div class="clearfix"> </div>
+        </div> -->
+        <div class="footer-navbar">
+            <div class="col-xs-9 footer-navbar-menu">
+                <ul>
+                    <li>
+                        <a href="#searching">Back to the top</a>
+                    </li>
+                    <!-- <li>
+                        <a href="#history">HISTORY</a>
+                    </li> -->
+                </ul>
+            </div>
+<!-- <div class="clearfix"></div> -->
+            <div class="copy-right">
+                <div class="footer-connection">
+                    <a class="github footer-social-icon" id="icon-github" href="#">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a class="email footer-social-icon" href="#">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                </div>
+                <p>
+                    &copy; 2022 SoftCon.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <div class="overlay"></div> -->
+    <script src="./assets/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</body>
+</html>

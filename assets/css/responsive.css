@@ -1,0 +1,151 @@
+/* PC */
+@media (min-width: 1024px) {
+    
+}
+
+/* Tablet & Mobile*/
+@media (max-width: 1023px) {
+
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .wide {
+        max-width: 740px;
+    }
+
+    .header {
+        height: 950px
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .wide {
+        /* overflow: hidden; */
+        max-width: 360px;
+        padding-left: 3%;
+    }
+
+    .header__dictlang {
+        /* display: none; */
+        display: flex;
+        max-width: 250px;
+        min-width: 30px;
+    }
+
+    .header__dictlang-item {
+        font-size: 1.4rem;
+        min-width: 30px;
+        font-weight: 600;
+    }
+
+    #header__dictlang-en {
+        visibility: hidden;
+        position: relative;
+    }
+
+    #header__dictlang-en:after {
+        visibility: visible;
+        content: "EN";
+        font-size: 2.4rem;
+        position: absolute;
+        padding: 10%;
+    }
+
+    #header__dictlang-vn {
+        visibility: hidden;
+        position: relative;
+    }
+
+    #header__dictlang-vn:after {
+        visibility: visible;
+        content: "VN";
+        font-size: 2.4rem;
+        position: absolute;
+        padding: 10%;
+    }
+
+    .header__navbar-item {
+        display: none;
+    }
+
+    .header__logo {
+        height: 50px;
+    }
+
+    .header_logo-name {
+        font-size: 1.4rem;
+    }
+
+    .header_logo-img {
+        width: 30px;
+    }
+
+    .header__weblang-menu {
+        right: 10%;
+    }
+
+    /* Search Section */
+    .header__search__text {
+        font-size: 2.8rem;
+    }
+
+    .header__search__btn {
+        min-width: 320px;
+    }
+
+    /* Search Result */
+    .result-item__term-header h1{
+        font-size: 4.4rem;
+    }
+
+    .result-item__term-attr {
+        font-size: 1.8rem;
+    }
+
+    .result-item__term-speaker {
+        font-size: 2.8rem;
+    }
+
+
+    /* History Section */
+    .col {
+        flex-basis: 100%;
+    }
+
+    .history-item-term {
+        font-size: 2.4rem;
+    }
+
+    .history-item-word-type {
+        font-size: 1.8rem;
+    }
+
+    /* Footer */
+
+    .footer-connection {
+        padding: 20px;
+        text-align: center;
+    } 
+
+    .footer-connection h3 {
+        font-size: 2.2rem;
+    }
+
+    .footer-contact-email {
+        width: 65%;
+        padding-left: 20px;
+    }
+
+    .footer-contact-email h3 {
+        font-size: 2.2rem;
+    }
+
+    .footer-navbar {
+        padding-right: 48px;
+        padding-left: 48px;
+    }
+
+}
