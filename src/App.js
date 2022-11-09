@@ -8,6 +8,7 @@ import "./style/responsive.css";
 function App() {
   return (
     <>
+      <Home />
       <header className="header" id="searching">
         <div className="header-top">
           <div className="wide">
