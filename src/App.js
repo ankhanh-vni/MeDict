@@ -1,6 +1,10 @@
 import "./App.css";
 import Home from "./components/Home";
 
+import "./style/base.css";
+import "./style/main.css";
+import "./style/responsive.css";
+
 function App() {
   return (
     <>
