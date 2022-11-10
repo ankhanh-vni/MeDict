@@ -8,14 +8,13 @@ import "./style/responsive.css";
 function App() {
   return (
     <>
-      <Home />
       <header className="header" id="searching">
         <div className="header-top">
           <div className="wide">
             <div className="main-header">
               <div className="header__logo">
                 <img
-                  src="./assets/img/logo_vinuni_white.png"
+                  src="../img/logo_vinuni_white.png"
                   alt=""
                   className="header_logo-img"
                 />
