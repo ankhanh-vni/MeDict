@@ -22,26 +22,68 @@ function SwapDivsWithClick() {
 
 const searchSuggest = document.querySelector('.header__search-result');
 const searchBtn = document.querySelector('.header__search__btn');
+const searchMobile = document.querySelector('.search-mobile');
+const searchCloseMobile = document.querySelector('.search-mobile-head-icon');
+const searchMobileBtn = document.querySelector('.search-mobile-head-input');
+const mobileSuggest = document.querySelector('.search-mobile-suggest');
+var x = window.matchMedia("(max-width: 739px)")
+
 searchBtn.onclick = function () {
-    if (searchSuggest.classList.contains('display')) {
-        searchSuggest.classList.remove('display');
+    if (x.matches) {
+        /* Search-mobile */
+        searchMobile.classList.add('display');
+        // document.querySelector('body').classList.add('disabled-scroll'); 
     } else {
-        searchSuggest.classList.add('display');
+        if (searchSuggest.classList.contains('display')) {
+            searchSuggest.classList.remove('display');
+        } else {
+            searchSuggest.classList.add('display');
+        }
     }
 }
 
+searchMobileBtn.onclick = function () {
+    mobileSuggest.classList.add('display');
+}
+
+searchCloseMobile.onclick = function () {
+    searchMobile.classList.remove('display');
+    // document.querySelector('body').classList.remove('disabled-scroll'); 
+} 
+
+
 /* Display Search Result */
 
-const searchResult = document.querySelector('.section-search-result');
-const suggestTerm = document.querySelector('.header__search-result');
-suggestTerm.onclick = function () {
-    // if (searchResult.classList.contains('display')) {
-    //     searchResult.classList.remove('display');
-    // } else {
-    //     searchResult.classList.add('display');
-    // }
-    searchResult.classList.add('display');
+// const searchResult = document.querySelector('.section-search-result');
+// const suggestTerm = document.querySelector('.header__search-result');
+// suggestTerm.onclick = function () {
+//     searchResult.classList.add('display');
+// }
+
+const suggestTerm = document.querySelectorAll('.header__search-result-suggest')
+const modal = document.querySelector('.modal_result')
+const modalClose = document.querySelector(".modal_result-close")
+const modalContainer = document.querySelector(".modal_result-container")
+
+function removeSearchResult() {
+    modal.classList.remove('open');
 }
+
+for (const term of suggestTerm) {
+    term.addEventListener('click', showSearchResult);
+}
+
+function showSearchResult() {
+    modal.classList.add('open');
+    searchSuggest.classList.remove('display');
+    mobileSuggest.classList.remove('display');
+}
+
+modalClose.addEventListener('click', removeSearchResult)
+modal.addEventListener('click', removeSearchResult)
+modalContainer.addEventListener('click', function (event) {
+    event.stopPropagation();
+})
 
 /*Expan Word Meaning*/
 
@@ -54,20 +96,3 @@ expandBtn.onclick = function () {
         meaning.classList.add('display');
     }
 }
-
-/**-----------------------Header fixed---------------------- */
-// let headerTop = document.querySelector('.header-top');
-
-// window.onscroll = function () {
-//     if (window.scrollY > 0) {
-//         /**-------------Header Mobile--------------- */
-//         if (!headerMobile.classList.contains('header-mobile--background')) {
-//             headerMobile.classList.add('header-mobile--background')
-//         }
-//     } else {
-//         /**-------------Header Mobile--------------- */
-//         if (headerMobile.classList.contains('header-mobile--background')) {
-//             headerMobile.classList.remove('header-mobile--background')
-//         }
-//     }
-// }

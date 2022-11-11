@@ -96,19 +96,37 @@
         min-width: 320px;
     }
 
+    .search-mobile-suggest {
+        margin: 20px auto;
+    }
+
+    .header__search-result-suggest {
+        padding: 8px 8px 8px 0px;
+    }
+
     /* Search Result */
     .result-item__term-header h1{
-        font-size: 4.4rem;
+        font-size: 4.0rem;
     }
 
     .result-item__term-attr {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .result-item__term-speaker {
         font-size: 2.8rem;
     }
 
+    .modal_result-container {
+        margin-left: 16px;
+        margin-right: 16px;
+        height: auto;
+    }
+    
+    .modal_result-header {
+        font-size: 2.6rem;
+        height: 80px;
+    }
 
     /* History Section */
     .col {
@@ -148,4 +166,18 @@
         padding-left: 48px;
     }
 
+    .separation_line {
+        display: block;
+        max-width: 80%;
+        justify-content: center;
+    }
+
+    .line-result-mobile {
+        display: block;
+        max-width: 100%;
+        justify-content: center;
+        margin: 0 auto;
+        align-items: center;
+        border-bottom: 2px solid var(--red-vinuni-color);
+    }
 }

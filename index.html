@@ -42,7 +42,7 @@
                             <div class="header__weblang-sub-list">
                                 <input type="radio" hidden checked id="lang1" name="selection">
                                 <label for="lang1" class="header__weblang-sub-button">
-                                    <a href="index.html">English</a>
+                                    <a href="index.html" class="text-white">English</a>
                                 </label>
                                 <input type="radio" hidden id="lang2" name="selection">
                                 <label for="lang2" class="header__weblang-sub-button">
@@ -73,7 +73,7 @@
             <h3 class="header__search__text">Start your search!</h5>
             <div class="header__search__btn">
                 <i class="fas fa-search header__search__btn-icon"></i>
-                <input class="header__search__btn-text" type="text" placeholder="Enter your words">
+                <input class="header__search__btn-text" type="text" placeholder="Enter your word">
             </div>
 
             <div class="header__search-result">
@@ -97,7 +97,7 @@
         </div>
     </header>
 
-    <section class="section-item section-search-result">
+    <!-- <section class="section-item section-search-result">
         <div class="wide">
             <h2 class="section-item__heading">Search Result</h2>
             <div class="result-item">
@@ -126,7 +126,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- <section class="section-item section-history">
         <div class="wide">
@@ -341,6 +341,87 @@
             </div>
         </div>
     </footer>
+
+    <section class="search-mobile">
+        <div class="search-mobile-head">
+            <i class="search-mobile-head-icon fas fa-angle-left"></i>
+            <input class="search-mobile-head-input" type="text" placeholder="Enter your word?">
+        </div>
+
+        <div class="line-result-mobile"></div>
+
+        <div class="search-mobile-body">
+            <div class="search-mobile-suggest">
+                <a href="#" class="header__search-result-suggest">
+                    <i class="fas fa-search header__search__btn-icon"></i>
+                    acinic (adjective)
+                </a>
+                <a href="#" class="header__search-result-suggest">
+                    <i class="fas fa-search header__search__btn-icon"></i>
+                    Result
+                </a>
+                <a href="#" class="header__search-result-suggest">
+                    <i class="fas fa-search header__search__btn-icon"></i>
+                    Result
+                </a>
+                <a href="#" class="header__search-result-suggest">
+                    <i class="fas fa-search header__search__btn-icon"></i>
+                    Result
+                </a>
+                <a href="#" class="header__search-result-suggest">
+                    <i class="fas fa-search header__search__btn-icon"></i>
+                    Result
+                </a>
+                <a href="#" class="header__search-result-suggest">
+                    <i class="fas fa-search header__search__btn-icon"></i>
+                    Result
+                </a>
+                <a href="#" class="header__search-result-suggest">
+                    <i class="fas fa-search header__search__btn-icon"></i>
+                    Result
+                </a>
+            </div>
+        </div>
+    </section>
+            
+    <section class="modal_result modal_result-mobile">
+        <div class="modal_result-container">
+            <header class="modal_result-header">
+                <div class="modal_result-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                Search Result
+            </header>
+
+            <section class="section-item section-search-result">
+                <div class="result-item">
+                    <div class="result-item__term">
+                        <div class="result-item__term-header">
+                            <h1>acinic</h1>
+                           <i class="fa-solid fa-volume-high result-item__term-speaker"></i>
+                        </div>
+                
+                        <div class="result-item__term-attr">
+                            <span>adjective</span>
+                        </div>
+                    </div>
+        
+                    <div class="separation_line"></div>
+        
+                    <div class="result-item__term">
+                        <div class="result-item__term-header">
+                            <h1>tuyến nang</h1>
+                           <i class="fa-solid fa-volume-high result-item__term-speaker"></i>
+                        </div>
+                
+                        <div class="result-item__term-attr">
+                            <span>tính từ</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
 
     <!-- <div class="overlay"></div> -->
     <script src="./assets/js/main.js"></script>
