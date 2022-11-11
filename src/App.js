@@ -14,7 +14,7 @@ function App() {
             <div className="main-header">
               <div className="header__logo">
                 <img
-                  src="../img/logo_vinuni_white.png"
+                  src="./assets/img/logo_vinuni_white.png"
                   alt=""
                   className="header_logo-img"
                 />
@@ -50,7 +50,9 @@ function App() {
                       htmlFor="lang1"
                       className="header__weblang-sub-button"
                     >
-                      <a href="index.html">English</a>
+                      <a href="index.html" className="text-white">
+                        English
+                      </a>
                     </label>
                     <input type="radio" id="lang2" name="selection" hidden="" />
                     <label
@@ -86,7 +88,7 @@ function App() {
             <input
               className="header__search__btn-text"
               type="text"
-              placeholder="Enter your words"
+              placeholder="Enter your word"
             />
           </div>
           <div className="header__search-result">
@@ -109,195 +111,6 @@ function App() {
           </div>
         </div>
       </header>
-      <section className="section-item section-search-result">
-        <div className="wide">
-          <h2 className="section-item__heading">Search Result</h2>
-          <div className="result-item">
-            <div className="result-item__term">
-              <div className="result-item__term-header">
-                <h1>acinic</h1>
-                <i className="fa-solid fa-volume-high result-item__term-speaker" />
-              </div>
-              <div className="result-item__term-attr">
-                <span>adjective</span>
-              </div>
-            </div>
-            <div className="separation_line" />
-            <div className="result-item__term">
-              <div className="result-item__term-header">
-                <h1>tuyến nang</h1>
-                <i className="fa-solid fa-volume-high result-item__term-speaker" />
-              </div>
-              <div className="result-item__term-attr">
-                <span>tính từ</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* <section class="section-item section-history">
-  <div class="wide">
-      <h2 class="section-item__heading">Recent searched terms</h2>
-      <div class="row section-history__row">
-          <div class="col">
-
-              <div class="history-item history-item-searching">
-                  <div class="history-item-info">
-                      <h6 class="history-item-term">
-                          acinic
-                          <i class="fa-solid fa-volume-high history-item-speaker"></i>
-                      </h6>
-                      <span class="history-item-word-type">adjective</span>
-                  </div>
-                  <a class="history-item-expand">
-                      <i class="fa-solid fa-angles-down"></i>
-                  </a>
-              </div>
-
-              <div class="history-item history-item-meaning">
-                  <div class="history-item-info">
-                      <h6 class="history-item-term">
-                          tuyến nang
-                          <i class="fa-solid fa-volume-high history-item-speaker"></i>
-                      </h6>
-                      <span class="history-item-word-type">tính từ</span>
-                  </div>
-              </div>
-          </div>
-
-          <div class="col">
-
-              <div class="history-item history-item-searching">
-                  <div class="history-item-info">
-                      <h6 class="history-item-term">
-                          acinic
-                          <i class="fa-solid fa-volume-high history-item-speaker"></i>
-                      </h6>
-                      <span class="history-item-word-type">adjective</span>
-                  </div>
-                  <a class="history-item-expand">
-                      <i class="fa-solid fa-angles-down"></i>
-                  </a>
-              </div>
-
-              <div class="history-item history-item-meaning">
-                  <div class="history-item-info">
-                      <h6 class="history-item-term">
-                          tuyến nang
-                          <i class="fa-solid fa-volume-high history-item-speaker"></i>
-                      </h6>
-                      <span class="history-item-word-type">tính từ</span>
-                  </div>
-              </div>
-          </div>
-
-          <div class="col">
-
-              <div class="history-item history-item-searching">
-                  <div class="history-item-info">
-                      <h6 class="history-item-term">
-                          acinic
-                          <i class="fa-solid fa-volume-high history-item-speaker"></i>
-                      </h6>
-                      <span class="history-item-word-type">adjective</span>
-                  </div>
-                  <a class="history-item-expand">
-                      <i class="fa-solid fa-angles-down"></i>
-                  </a>
-              </div>
-
-              <div class="history-item history-item-meaning">
-                  <div class="history-item-info">
-                      <h6 class="history-item-term">
-                          tuyến nang
-                          <i class="fa-solid fa-volume-high history-item-speaker"></i>
-                      </h6>
-                      <span class="history-item-word-type">tính từ</span>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="row section-history__row">
-          <div class="col">
-
-              <div class="history-item history-item-searching">
-                  <div class="history-item-info">
-                      <h6 class="history-item-term">
-                          acinic
-                          <i class="fa-solid fa-volume-high history-item-speaker"></i>
-                      </h6>
-                      <span class="history-item-word-type">adjective</span>
-                  </div>
-                  <a class="history-item-expand">
-                      <i class="fa-solid fa-angles-down"></i>
-                  </a>
-              </div>
-
-              <div class="history-item history-item-meaning">
-                  <div class="history-item-info">
-                      <h6 class="history-item-term">
-                          tuyến nang
-                          <i class="fa-solid fa-volume-high history-item-speaker"></i>
-                      </h6>
-                      <span class="history-item-word-type">tính từ</span>
-                  </div>
-              </div>
-          </div>
-
-          <div class="col">
-
-              <div class="history-item history-item-searching">
-                  <div class="history-item-info">
-                      <h6 class="history-item-term">
-                          acinic
-                          <i class="fa-solid fa-volume-high history-item-speaker"></i>
-                      </h6>
-                      <span class="history-item-word-type">adjective</span>
-                  </div>
-                  <a class="history-item-expand">
-                      <i class="fa-solid fa-angles-down"></i>
-                  </a>
-              </div>
-
-              <div class="history-item history-item-meaning">
-                  <div class="history-item-info">
-                      <h6 class="history-item-term">
-                          tuyến nang
-                          <i class="fa-solid fa-volume-high history-item-speaker"></i>
-                      </h6>
-                      <span class="history-item-word-type">tính từ</span>
-                  </div>
-              </div>
-          </div>
-
-          <div class="col">
-
-              <div class="history-item history-item-searching">
-                  <div class="history-item-info">
-                      <h6 class="history-item-term">
-                          acinic
-                          <i class="fa-solid fa-volume-high history-item-speaker"></i>
-                      </h6>
-                      <span class="history-item-word-type">adjective</span>
-                  </div>
-                  <a class="history-item-expand">
-                      <i class="fa-solid fa-angles-down"></i>
-                  </a>
-              </div>
-
-              <div class="history-item history-item-meaning">
-                  <div class="history-item-info">
-                      <h6 class="history-item-term">
-                          tuyến nang
-                          <i class="fa-solid fa-volume-high history-item-speaker"></i>
-                      </h6>
-                      <span class="history-item-word-type">tính từ</span>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-    </section> */}
       <footer className="footer-bot">
         {/* <div class="footer-info">
       <div class="footer-connection">
@@ -349,7 +162,82 @@ function App() {
           </div>
         </div>
       </footer>
-      {/* <div class="overlay"></div> */}
+      <section className="search-mobile">
+        <div className="search-mobile-head">
+          <i className="search-mobile-head-icon fas fa-angle-left" />
+          <input
+            className="search-mobile-head-input"
+            type="text"
+            placeholder="Enter your word?"
+          />
+        </div>
+        <div className="line-result-mobile" />
+        <div className="search-mobile-body">
+          <div className="search-mobile-suggest">
+            <a href="#" className="header__search-result-suggest">
+              <i className="fas fa-search header__search__btn-icon" />
+              acinic (adjective)
+            </a>
+            <a href="#" className="header__search-result-suggest">
+              <i className="fas fa-search header__search__btn-icon" />
+              Result
+            </a>
+            <a href="#" className="header__search-result-suggest">
+              <i className="fas fa-search header__search__btn-icon" />
+              Result
+            </a>
+            <a href="#" className="header__search-result-suggest">
+              <i className="fas fa-search header__search__btn-icon" />
+              Result
+            </a>
+            <a href="#" className="header__search-result-suggest">
+              <i className="fas fa-search header__search__btn-icon" />
+              Result
+            </a>
+            <a href="#" className="header__search-result-suggest">
+              <i className="fas fa-search header__search__btn-icon" />
+              Result
+            </a>
+            <a href="#" className="header__search-result-suggest">
+              <i className="fas fa-search header__search__btn-icon" />
+              Result
+            </a>
+          </div>
+        </div>
+      </section>
+      <section className="modal_result modal_result-mobile">
+        <div className="modal_result-container">
+          <header className="modal_result-header">
+            <div className="modal_result-close">
+              <i className="fa-solid fa-xmark" />
+            </div>
+            Search Result
+          </header>
+          <section className="section-item section-search-result">
+            <div className="result-item">
+              <div className="result-item__term">
+                <div className="result-item__term-header">
+                  <h1>acinic</h1>
+                  <i className="fa-solid fa-volume-high result-item__term-speaker" />
+                </div>
+                <div className="result-item__term-attr">
+                  <span>adjective</span>
+                </div>
+              </div>
+              <div className="separation_line" />
+              <div className="result-item__term">
+                <div className="result-item__term-header">
+                  <h1>tuyến nang</h1>
+                  <i className="fa-solid fa-volume-high result-item__term-speaker" />
+                </div>
+                <div className="result-item__term-attr">
+                  <span>tính từ</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
     </>
   );
 }

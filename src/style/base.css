@@ -109,3 +109,7 @@ body.disabled-scroll {
 .border-choosen {
   border-bottom: 2px solid var(--white-color);
 }
+
+.text-white {
+  color: var(--white-color);
+}
