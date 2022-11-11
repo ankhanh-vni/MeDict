@@ -106,15 +106,16 @@
 
     /* Search Result */
     .result-item__term-header h1{
-        font-size: 4.0rem;
+        font-size: 3.0rem;
     }
 
     .result-item__term-attr {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     .result-item__term-speaker {
-        font-size: 2.8rem;
+        font-size: 2.4rem;
+        padding-left: 5px;
     }
 
     .modal_result-container {
@@ -124,8 +125,13 @@
     }
     
     .modal_result-header {
-        font-size: 2.6rem;
+        font-size: 2.2rem;
         height: 80px;
+    }
+
+    .modal_result-close {
+        font-size: 1.8rem;
+        padding: 0 6px;
     }
 
     /* History Section */
