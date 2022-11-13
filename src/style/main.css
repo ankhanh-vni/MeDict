@@ -18,6 +18,7 @@
   background-color: var(--blue-vinuni-color);
   box-shadow: rgb(0 0 0 / 16%) 0px 4px 8px;
   position: fixed;
+  padding: 0 10%;
 }
 
 .main-header {
