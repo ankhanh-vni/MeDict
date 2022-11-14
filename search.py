@@ -11,7 +11,7 @@ api = Api(app)
 # db = SQLAlchemy(app)
 # db.create_all() # create the database
 
-dictionary = {"hello":"xin chao", "vagina":"cai bim", "dick":"con cac", "ass":"lo dit", "pussy":"cai lon"}
+dictionary = {"hello":"xin chao", "goodbye":"tam biet", "morning":"buoi sang}
 
 
 # We will make a class that is resource and this resource will have some methods that
