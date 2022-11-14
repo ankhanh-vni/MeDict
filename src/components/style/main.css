@@ -18,7 +18,6 @@
   background-color: var(--blue-vinuni-color);
   box-shadow: rgb(0 0 0 / 16%) 0px 4px 8px;
   position: fixed;
-  padding: 0 10%;
 }
 
 .main-header {
@@ -113,7 +112,20 @@
   opacity: 0.8;
 }
 
-.header__search-result,
+.header__search-result {
+  position: absolute;
+  top: 85%;
+  right: 0;
+  min-width: 120px;
+  background-color: var(--white-color);
+  border-radius: 12px;
+  box-shadow: rgb(0 0 0 / 16%) 0px 6px 16px;
+  padding: 12px 0;
+  transition: opacity 0.2s ease-in-out;
+  animation: fadeIn ease-in-out 0.2s;
+  z-index: 10;
+}
+
 .header__weblang-sub {
   position: absolute;
   top: 85%;
@@ -247,7 +259,6 @@
 /* .header__dictlang-btn--full {
     border-radius: 30px;
 }
-
 .header__dictlang-btn--full .header__dictlang-btn-text {
     display: inline-block;
 } */

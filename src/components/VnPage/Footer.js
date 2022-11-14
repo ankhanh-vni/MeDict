@@ -3,7 +3,6 @@ import "../style/main.css";
 import "../style/responsive.css";
 
 import React from "react";
-import { useState } from "react";
 
 export default function Footer() {
   return (
@@ -12,7 +11,7 @@ export default function Footer() {
         <div className="col-xs-9 footer-navbar-menu">
           <ul>
             <li>
-              <a href="#searching">Back to the top</a>
+              <a href="#searching">Trở lại đầu trang</a>
             </li>
           </ul>
         </div>

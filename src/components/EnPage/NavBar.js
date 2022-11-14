@@ -4,7 +4,6 @@ import "../style/responsive.css";
 import logo from "../img/logo_vinuni_white.png";
 
 import React from "react";
-import { useState } from "react";
 
 function NavBar() {
   return (
@@ -39,14 +38,14 @@ function NavBar() {
                   defaultChecked=""
                   id="lang1"
                   name="selection"
-                  hidden=""
+                  hidden="true"
                 />
                 <label htmlFor="lang1" className="header__weblang-sub-button">
                   <a href="index.html" className="text-white">
                     English
                   </a>
                 </label>
-                <input type="radio" id="lang2" name="selection" hidden="" />
+                <input type="radio" id="lang2" name="selection" hidden="true" />
                 <label htmlFor="lang2" className="header__weblang-sub-button">
                   <a href="index_vn.html">Vietnamese</a>
                 </label>

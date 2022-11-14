@@ -1,22 +1,16 @@
 import "./App.css";
-import Home from "./components/Home";
-import DictLang from "./components/DictLang";
-import NavBar from "./components/NavBar";
-import SearchBar from "./components/SearchBar";
-import Footer from "./components/Footer";
+import Home from "./components/EnPage/Home";
+import Footer from "./components/EnPage/Footer";
+import React from "react";
 
-import "./style/base.css";
-import "./style/main.css";
-import "./style/responsive.css";
+import "./components/style/base.css";
+import "./components/style/main.css";
+import "./components/style/responsive.css";
 
 function App() {
   return (
     <>
-      <header className="header" id="searching">
-        <NavBar />
-        <DictLang />
-        <SearchBar />
-      </header>
+      <Home />
       <Footer />
       <section className="search-mobile">
         <div className="search-mobile-head">
