@@ -2,6 +2,7 @@ import "./App.css";
 import Home from "./components/EnPage/Home";
 import Footer from "./components/EnPage/Footer";
 import React from "react";
+import Test from "./components/Test";
 
 import "./components/style/base.css";
 import "./components/style/main.css";
@@ -10,6 +11,7 @@ import "./components/style/responsive.css";
 function App() {
   return (
     <>
+      <Test />
       <Home />
       <Footer />
       <section className="search-mobile">

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const baseURL = "https://jsonplaceholder.typicode.com/posts/1";
 
-function Home() {
+function Test() {
   const [post, setPost] = useState(null);
 
   useEffect(() => {
@@ -22,4 +22,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Test;
