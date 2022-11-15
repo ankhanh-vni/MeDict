@@ -1,0 +1,48 @@
+import "../style/base.css";
+import "../style/main.css";
+import "../style/responsive.css";
+
+import React from "react";
+import { useState } from "react";
+
+export default function Result(props) {
+  return (
+    <>
+      {props.showResult && (
+        <section className="modal_result modal_result-mobile">
+          <div className="modal_result-container">
+            <header className="modal_result-header">
+              <div className="modal_result-close">
+                <i className="fa-solid fa-xmark" />
+              </div>
+              Search Result
+            </header>
+            <section className="section-item section-search-result">
+              <div className="result-item">
+                <div className="result-item__term">
+                  <div className="result-item__term-header">
+                    <h1>acinic</h1>
+                    <i className="fa-solid fa-volume-high result-item__term-speaker" />
+                  </div>
+                  <div className="result-item__term-attr">
+                    <span>adjective</span>
+                  </div>
+                </div>
+                <div className="separation_line" />
+                <div className="result-item__term">
+                  <div className="result-item__term-header">
+                    <h1>tuyến nang</h1>
+                    <i className="fa-solid fa-volume-high result-item__term-speaker" />
+                  </div>
+                  <div className="result-item__term-attr">
+                    <span>tính từ</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+      )}
+    </>
+  );
+}

@@ -1,7 +1,8 @@
 import "./App.css";
+import React, { useState } from "react";
 import Home from "./components/EnPage/Home";
 import Footer from "./components/EnPage/Footer";
-import React from "react";
+import Result from "./components/EnPage/Result";
 import Test from "./components/Test";
 
 import "./components/style/base.css";
@@ -9,9 +10,9 @@ import "./components/style/main.css";
 import "./components/style/responsive.css";
 
 function App() {
+  const [showResult, setShowResult] = useState(false);
   return (
     <>
-      <Test />
       <Home />
       <Footer />
       <section className="search-mobile">
@@ -57,39 +58,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="modal_result modal_result-mobile">
-        <div className="modal_result-container">
-          <header className="modal_result-header">
-            <div className="modal_result-close">
-              <i className="fa-solid fa-xmark" />
-            </div>
-            Search Result
-          </header>
-          <section className="section-item section-search-result">
-            <div className="result-item">
-              <div className="result-item__term">
-                <div className="result-item__term-header">
-                  <h1>acinic</h1>
-                  <i className="fa-solid fa-volume-high result-item__term-speaker" />
-                </div>
-                <div className="result-item__term-attr">
-                  <span>adjective</span>
-                </div>
-              </div>
-              <div className="separation_line" />
-              <div className="result-item__term">
-                <div className="result-item__term-header">
-                  <h1>tuyến nang</h1>
-                  <i className="fa-solid fa-volume-high result-item__term-speaker" />
-                </div>
-                <div className="result-item__term-attr">
-                  <span>tính từ</span>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </section>
+      <Result showResult={showResult} setShowResult={setShowResult} />
     </>
   );
 }
