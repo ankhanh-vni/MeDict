@@ -6,7 +6,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useDebounce } from "use-debounce";
 
-import WebSuggestion from "./WebSuggestion";
+import WordSuggestion from "./WordSuggestion";
 
 // function getSuggestion(text, token) {
 //   return axios
@@ -105,9 +105,7 @@ function SearchBar(props) {
           placeholder="Enter your word"
         />
       </div>
-      {openSearch && (
-        <WebSuggestion fromEng={props.fromEng} response={response} />
-      )}
+      {openSearch && <WordSuggestion {...props} response={response} />}
     </div>
   );
 }

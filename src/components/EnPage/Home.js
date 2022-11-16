@@ -10,17 +10,12 @@ import DictLang from "./DictLang";
 import SearchBar from "./SearchBar";
 import TestSearchBar from "./TestSearchbar";
 
-export default function Home() {
-  const [fromEng, setFromEng] = useState(false);
-  const handleClick = () => {
-    setFromEng(!fromEng);
-  };
-
+export default function Home(props) {
   return (
     <header className="header" id="searching">
       <NavBar />
-      <DictLang fromEng={fromEng} handleClick={handleClick} />
-      <SearchBar fromEng={fromEng} />
+      <DictLang {...props} />
+      <SearchBar {...props} />
       {/* <TestSearchBar fromEng={fromEng} /> */}
     </header>
   );

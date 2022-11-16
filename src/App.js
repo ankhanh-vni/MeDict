@@ -11,9 +11,21 @@ import "./components/style/responsive.css";
 
 function App() {
   const [showResult, setShowResult] = useState(false);
+  const [result, setResult] = useState();
+  const [fromEng, setFromEng] = useState(false);
+  const handleClick = () => {
+    setFromEng(!fromEng);
+  };
+
   return (
     <>
-      <Home />
+      <Home
+        showResult={showResult}
+        setShowResult={setShowResult}
+        fromEng={fromEng}
+        setFromEng={setFromEng}
+        handleClick={handleClick}
+      />
       <Footer />
       <section className="search-mobile">
         <div className="search-mobile-head">
@@ -58,7 +70,14 @@ function App() {
           </div>
         </div>
       </section>
-      <Result showResult={showResult} setShowResult={setShowResult} />
+      <Result
+        showResult={showResult}
+        setShowResult={setShowResult}
+        result={result}
+        setResult={setResult}
+        fromEng={fromEng}
+        setFromEng={setFromEng}
+      />
     </>
   );
 }

@@ -12,7 +12,10 @@ export default function Result(props) {
         <section className="modal_result modal_result-mobile">
           <div className="modal_result-container">
             <header className="modal_result-header">
-              <div className="modal_result-close">
+              <div
+                className="modal_result-close"
+                onClick={() => props.setShowResult(!props.showResult)}
+              >
                 <i className="fa-solid fa-xmark" />
               </div>
               Search Result
