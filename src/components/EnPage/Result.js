@@ -24,21 +24,29 @@ export default function Result(props) {
               <div className="result-item">
                 <div className="result-item__term">
                   <div className="result-item__term-header">
-                    <h1>acinic</h1>
+                    {props.fromEng ? (
+                      <h1>{props.result.en}</h1>
+                    ) : (
+                      <h1>{props.result.vn}</h1>
+                    )}
                     <i className="fa-solid fa-volume-high result-item__term-speaker" />
                   </div>
                   <div className="result-item__term-attr">
-                    <span>adjective</span>
+                    <span>{props.result.type}</span>
                   </div>
                 </div>
                 <div className="separation_line" />
                 <div className="result-item__term">
                   <div className="result-item__term-header">
-                    <h1>tuyến nang</h1>
+                    {props.fromEng ? (
+                      <h1>{props.result.vn}</h1>
+                    ) : (
+                      <h1>{props.result.en}</h1>
+                    )}
                     <i className="fa-solid fa-volume-high result-item__term-speaker" />
                   </div>
                   <div className="result-item__term-attr">
-                    <span>tính từ</span>
+                    <span>{props.result.type}</span>
                   </div>
                 </div>
               </div>

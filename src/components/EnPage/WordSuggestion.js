@@ -14,7 +14,14 @@ export default function WordSuggestion(props) {
             <a
               href="#"
               className="header__search-result-suggest"
-              onClick={() => props.setShowResult(!props.showResult)}
+              onClick={() => {
+                props.setShowResult(!props.showResult);
+                props.setResult({
+                  en: `${props.response[index].en}`,
+                  vn: `${props.response[index].vn}`,
+                  type: `${props.response[index].type}`,
+                });
+              }}
             >
               <i
                 className="fas fa-search header__search__btn-icon"

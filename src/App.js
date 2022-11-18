@@ -11,7 +11,11 @@ import "./components/style/responsive.css";
 
 function App() {
   const [showResult, setShowResult] = useState(false);
-  const [result, setResult] = useState();
+  const [result, setResult] = useState({
+    en: "",
+    vn: "",
+    type: "",
+  });
   const [fromEng, setFromEng] = useState(false);
   const handleClick = () => {
     setFromEng(!fromEng);
@@ -20,6 +24,8 @@ function App() {
   return (
     <>
       <Home
+        result={result}
+        setResult={setResult}
         showResult={showResult}
         setShowResult={setShowResult}
         fromEng={fromEng}
