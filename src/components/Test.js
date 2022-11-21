@@ -1,23 +1,27 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-const baseURL = "https://jsonplaceholder.typicode.com/posts/1";
+const baseURL = "http://172.16.18.152:5000/";
 
 function Test() {
   const [post, setPost] = useState(null);
 
   useEffect(() => {
-    axios.get(baseURL).then((response) => {
-      setPost(response.data);
-    });
+    axios
+      .get(baseURL, {
+        params: { word: "ab" },
+      })
+      .then((response) => {
+        setPost(response.data);
+      });
   }, []);
 
   if (!post) return null;
 
+  console.log(post);
   return (
     <div>
-      <h1>{post.title}</h1>
-      <p>{post.body}</p>
+      <h1>{post}</h1>
     </div>
   );
 }
