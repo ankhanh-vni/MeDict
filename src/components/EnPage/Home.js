@@ -7,7 +7,7 @@ import { useState } from "react";
 
 import NavBar from "./NavBar";
 import DictLang from "./DictLang";
-import SearchBar from "./SearchBar";
+import Search from "./Search";
 import TestSearchBar from "./TestSearchbar";
 
 export default function Home(props) {
@@ -15,7 +15,7 @@ export default function Home(props) {
     <header className="header" id="searching">
       <NavBar />
       <DictLang {...props} />
-      <SearchBar {...props} />
+      <Search {...props} />
       {/* <TestSearchBar fromEng={fromEng} /> */}
     </header>
   );
