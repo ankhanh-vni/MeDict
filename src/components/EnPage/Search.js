@@ -3,14 +3,9 @@ import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 import "../style/base.css";
 import "../style/main.css";
 import "../style/responsive.css";
-import axios from "axios";
-const baseURL = "http://172.16.18.152:5000/";
-
-
 
 
 function Search(props) {
-    const [wordList, setWordList] = useState();
     const fromEng = props.fromEng
     // note: the id field is mandatory
     const items = [
@@ -37,50 +32,29 @@ function Search(props) {
     ];
 
     const handleOnSearch = (string, results) => {
-        // onSearch will have as the first callback parameter
-        // the string searched and for the second the results.
-        // console.log(string, results)
-        // if (fromEng) {
-        //     return axios
-        //         .get(baseURL, {
-        //             params: { word: string },
-        //         })
-        //         .then((response) => {
-        //             results = response.json()
-        //         });
-        // }
-        // else {
-        //     return axios
-        //         .get(baseURL, {
-        //             params: { word: string },
-        //         })
-        //         .then((response) => {
-        //             results = response.json()
-        //         });
-        // }
-    }
+        // console.log(string, results);
+    };
 
     const handleOnHover = (result) => {
-        // the item hovered
-        // console.log(result)
-    }
+        // console.log(result);
+    };
 
     const handleOnSelect = (item) => {
-        // the item selected
-        console.log(props)
         props.setShowResult(!props.showResult);
         props.setResult({
             en: `${item.en}`,
             vn: `${item.vn}`,
             type: `${item.type}`,
         });
-    }
-
-
+    };
 
     const handleOnFocus = () => {
-        console.log('Focused')
-    }
+        // console.log("Focused");
+    };
+
+    const handleOnClear = () => {
+        // console.log("Cleared");
+    };
 
     const formatResult = (item) => {
         return (
@@ -101,13 +75,12 @@ function Search(props) {
                     onSelect={handleOnSelect}
                     onFocus={handleOnFocus}
                     autoFocus
+                    onClear={handleOnClear}
                     formatResult={formatResult}
-                    styling={
-                        {
-                            hoverColor: "pink"
-                        }
-                    }
                     fuseOptions={{ keys: fromEng ? ["en"] : ["vn"] }}
+                    resultStringKeyName={fromEng ? ["en"] : ["vn"]}
+
+
                 />
             </div>
 
