@@ -19,11 +19,7 @@ function Test() {
   if (!post) return null;
 
   console.log(post);
-  return (
-    <div>
-      <h1>{post}</h1>
-    </div>
-  );
+  return <div></div>;
 }
 
 export default Test;

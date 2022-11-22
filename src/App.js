@@ -31,7 +31,69 @@ function App() {
   return (
     <>
       {/* Home: tất cả trừ footer */}
-      <Test />
+      <Home
+        result={result}
+        setResult={setResult}
+        showResult={showResult}
+        setShowResult={setShowResult}
+        fromEng={fromEng}
+        setFromEng={setFromEng}
+        handleClick={handleClick}
+      />
+      <Footer />
+      {/* Section: search của mobile */}
+      <section className="search-mobile">
+        <div className="search-mobile-head">
+          <i className="search-mobile-head-icon fas fa-angle-left" />
+          <input
+            className="search-mobile-head-input"
+            type="text"
+            placeholder="Enter your word?"
+          />
+        </div>
+        <div className="line-result-mobile" />
+        <div className="search-mobile-body">
+          <div className="search-mobile-suggest">
+            <a href="#" className="header__search-result-suggest">
+              <i className="fas fa-search header__search__btn-icon" />
+              acinic (adjective)
+            </a>
+            <a href="#" className="header__search-result-suggest">
+              <i className="fas fa-search header__search__btn-icon" />
+              Result
+            </a>
+            <a href="#" className="header__search-result-suggest">
+              <i className="fas fa-search header__search__btn-icon" />
+              Result
+            </a>
+            <a href="#" className="header__search-result-suggest">
+              <i className="fas fa-search header__search__btn-icon" />
+              Result
+            </a>
+            <a href="#" className="header__search-result-suggest">
+              <i className="fas fa-search header__search__btn-icon" />
+              Result
+            </a>
+            <a href="#" className="header__search-result-suggest">
+              <i className="fas fa-search header__search__btn-icon" />
+              Result
+            </a>
+            <a href="#" className="header__search-result-suggest">
+              <i className="fas fa-search header__search__btn-icon" />
+              Result
+            </a>
+          </div>
+        </div>
+      </section>
+      {/* Result: cửa số pop up khi bấm vào word suggestion */}
+      <Result
+        showResult={showResult}
+        setShowResult={setShowResult}
+        result={result}
+        setResult={setResult}
+        fromEng={fromEng}
+        setFromEng={setFromEng}
+      />
     </>
   );
 }
