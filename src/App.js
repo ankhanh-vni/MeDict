@@ -15,6 +15,7 @@ function App() {
     en: "",
     vn: "",
     type: "",
+    type_vn: "",
   });
   const [fromEng, setFromEng] = useState(false);
   const handleClick = () => {
@@ -39,6 +40,7 @@ function App() {
         fromEng={fromEng}
         setFromEng={setFromEng}
         handleClick={handleClick}
+        handleUnicodeToChar={unicodeToChar}
       />
       <Footer />
       {/* Section: search của mobile */}
