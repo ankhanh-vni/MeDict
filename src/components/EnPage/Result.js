@@ -35,7 +35,7 @@ export default function Result(props) {
                     {props.fromEng ? (
                       <span>{props.result.type}</span>
                     ) : (
-                      <span>{props.result.type}</span>
+                      <span>{props.result.type_vn}</span>
                     )}
                   </div>
                 </div>
@@ -53,7 +53,7 @@ export default function Result(props) {
                     {props.fromEng ? (
                       <span>{props.result.type_vn}</span>
                     ) : (
-                      <span>{props.result.type_vn}</span>
+                      <span>{props.result.type}</span>
                     )}
                   </div>
                 </div>

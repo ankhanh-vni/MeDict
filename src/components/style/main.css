@@ -439,6 +439,8 @@
 
 .section-item {
   padding-top: 48px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .section-history {
