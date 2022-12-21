@@ -1,12 +1,20 @@
 import React from "react";
-import { ReactSearchAutocomplete } from "react-search-autocomplete";
+import {ReactSearchAutocomplete} from "react-search-autocomplete";
+import { useNavigate } from "react-router-dom";
 import "../style/base.css";
 // import "../style/main.css";
 // import "../style/responsive.css";
-import "../style/search.css";
+import "../style/searchmobile.css";
 
-function Search(props) {
+function SearchMobile(props) {
   const fromEng = props.fromEng;
+  
+//   let navigate = useNavigate();
+//   const routeChange = () =>{ 
+//     let path = "./Home"; 
+//     navigate(path);
+//   }
+
   // note: the id field is mandatory
   const items = [
     {
@@ -4065,7 +4073,7 @@ function Search(props) {
   const formatResult = (item) => {
     return (
       <>
-        <span style={{}}>
+        <span style={{ display: "block", textAlign: "left" }}>
           {fromEng ? item.en : item.vn} ({item.word_type})
         </span>
       </>
@@ -4073,9 +4081,9 @@ function Search(props) {
   };
 
   return (
-    <div className="header__search">
-      <h3 className="header__search__text">Start your search!</h3>
-      <div className="header__search__btn">
+    <div className="search-mobile">
+      <i className="search-mobile-head-icon fas fa-angle-left" ></i>
+      <div className="search-mobile-head">
         <ReactSearchAutocomplete
           items={items}
           onSearch={handleOnSearch}
@@ -4089,11 +4097,14 @@ function Search(props) {
           resultStringKeyName={fromEng ? ["en"] : ["vn"]}
           styling={{
             lineColor: "#c92127",
+            boxShadow: "none",
+            border:"none",
           }}
         />
       </div>
+      <div className="line-result-mobile" />
     </div>
   );
 }
 
-export default Search;
+export default SearchMobile;

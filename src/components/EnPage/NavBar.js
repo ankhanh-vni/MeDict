@@ -1,6 +1,7 @@
 import "../style/base.css";
-import "../style/main.css";
-import "../style/responsive.css";
+// import "../style/main.css";
+// import "../style/responsive.css";
+import "../style/navbar.css";
 import logo from "../img/logo_vinuni_white.png";
 
 import React from "react";
@@ -14,7 +15,6 @@ function NavBar() {
             <img src={logo} alt="" className="header_logo-img" />
             <p className="header_logo-name">Softcon</p>
           </div>
-          {/* Cần sửa thêm */}
           <div className="header__navbar">
             <div className="header__navbar-normal">
               <a

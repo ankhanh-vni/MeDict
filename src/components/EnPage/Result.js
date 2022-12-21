@@ -1,6 +1,7 @@
 import "../style/base.css";
-import "../style/main.css";
-import "../style/responsive.css";
+// import "../style/main.css";
+// import "../style/responsive.css";
+import "../style/result.css";
 
 import React from "react";
 import { useState } from "react";
