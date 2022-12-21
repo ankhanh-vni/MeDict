@@ -1,8 +1,9 @@
 import React from "react";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import "../style/base.css";
-import "../style/main.css";
-import "../style/responsive.css";
+// import "../style/main.css";
+// import "../style/responsive.css";
+import "../style/search.css";
 
 function Search(props) {
   const fromEng = props.fromEng;
@@ -4064,7 +4065,7 @@ function Search(props) {
   const formatResult = (item) => {
     return (
       <>
-        <span style={{ display: "block", textAlign: "left" }}>
+        <span style={{}}>
           {fromEng ? item.en : item.vn} ({item.word_type})
         </span>
       </>
@@ -4073,7 +4074,8 @@ function Search(props) {
 
   return (
     <div className="header__search">
-      <div style={{ width: 400 }}>
+      <h3 className="header__search__text">Start your search!</h3>
+      <div className="header__search__btn">
         <ReactSearchAutocomplete
           items={items}
           onSearch={handleOnSearch}
@@ -4085,6 +4087,9 @@ function Search(props) {
           formatResult={formatResult}
           fuseOptions={{ keys: fromEng ? ["en"] : ["vn"] }}
           resultStringKeyName={fromEng ? ["en"] : ["vn"]}
+          styling={{
+            lineColor: "#c92127",
+          }}
         />
       </div>
     </div>
