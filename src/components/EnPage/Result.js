@@ -7,6 +7,19 @@ import React from "react";
 import { useState } from "react";
 
 export default function Result(props) {
+  const wordTypeConverter = (type) => {
+    switch (type) {
+      case "n":
+        return "noun";
+      case "a":
+        return "adjective";
+      case "v":
+        return "verb";
+      default:
+        return "Word type not found";
+    }
+  };
+
   return (
     <>
       {props.showResult && (
@@ -34,7 +47,7 @@ export default function Result(props) {
                   </div>
                   <div className="result-item__term-attr">
                     {props.fromEng ? (
-                      <span>{props.result.type}</span>
+                      <span>{wordTypeConverter(props.result.type)}</span>
                     ) : (
                       <span>{props.result.type_vn}</span>
                     )}
@@ -54,7 +67,7 @@ export default function Result(props) {
                     {props.fromEng ? (
                       <span>{props.result.type_vn}</span>
                     ) : (
-                      <span>{props.result.type}</span>
+                      <span>{wordTypeConverter(props.result.type)}</span>
                     )}
                   </div>
                 </div>
