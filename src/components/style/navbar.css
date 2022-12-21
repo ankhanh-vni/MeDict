@@ -23,6 +23,8 @@
     color: var(--white-color);
     min-height: 80px;
     position: relative;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
   /* LOGO */

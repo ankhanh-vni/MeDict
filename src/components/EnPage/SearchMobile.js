@@ -1,6 +1,5 @@
 import React from "react";
 import {ReactSearchAutocomplete} from "react-search-autocomplete";
-import { useNavigate } from "react-router-dom";
 import "../style/base.css";
 // import "../style/main.css";
 // import "../style/responsive.css";
