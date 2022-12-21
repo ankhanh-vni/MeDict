@@ -1,6 +1,7 @@
 import "../style/base.css";
-import "../style/main.css";
-import "../style/responsive.css";
+// import "../style/main.css";
+// import "../style/responsive.css";
+import "../style/result.css";
 
 import React from "react";
 import { useState } from "react";
@@ -32,7 +33,11 @@ export default function Result(props) {
                     <i className="fa-solid fa-volume-high result-item__term-speaker" />
                   </div>
                   <div className="result-item__term-attr">
-                    <span>{props.result.type}</span>
+                    {props.fromEng ? (
+                      <span>{props.result.type}</span>
+                    ) : (
+                      <span>{props.result.type_vn}</span>
+                    )}
                   </div>
                 </div>
                 <div className="separation_line" />
@@ -46,7 +51,11 @@ export default function Result(props) {
                     <i className="fa-solid fa-volume-high result-item__term-speaker" />
                   </div>
                   <div className="result-item__term-attr">
-                    <span>{props.result.type}</span>
+                    {props.fromEng ? (
+                      <span>{props.result.type_vn}</span>
+                    ) : (
+                      <span>{props.result.type}</span>
+                    )}
                   </div>
                 </div>
               </div>

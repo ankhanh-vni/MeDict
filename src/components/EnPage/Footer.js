@@ -1,7 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import "../style/base.css";
-import "../style/main.css";
-import "../style/responsive.css";
+// import "../style/main.css";
+// import "../style/responsive.css";
+import "../style/footer.css";
 
 import React from "react";
 

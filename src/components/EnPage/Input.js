@@ -1,6 +1,6 @@
 import "../style/base.css";
 import "../style/main.css";
-import "../style/responsive.css";
+// import "../style/responsive.css";
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";

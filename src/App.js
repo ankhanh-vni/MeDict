@@ -15,6 +15,7 @@ function App() {
     en: "",
     vn: "",
     type: "",
+    type_vn: "",
   });
   const [fromEng, setFromEng] = useState(false);
   const handleClick = () => {
@@ -39,10 +40,11 @@ function App() {
         fromEng={fromEng}
         setFromEng={setFromEng}
         handleClick={handleClick}
+        handleUnicodeToChar={unicodeToChar}
       />
       <Footer />
       {/* Section: search của mobile */}
-      <section className="search-mobile">
+      {/* <section className="search-mobile">
         <div className="search-mobile-head">
           <i className="search-mobile-head-icon fas fa-angle-left" />
           <input
@@ -84,7 +86,7 @@ function App() {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Result: cửa số pop up khi bấm vào word suggestion */}
       <Result
         showResult={showResult}
