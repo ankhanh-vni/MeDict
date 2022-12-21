@@ -16,7 +16,7 @@ export default function Result(props) {
       case "v":
         return "verb";
       default:
-        return "Word type not found";
+        return type;
     }
   };
 
