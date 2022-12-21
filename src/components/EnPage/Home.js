@@ -8,8 +8,8 @@ import { useState } from "react";
 
 import NavBar from "./NavBar";
 import DictLang from "./DictLang";
+import SearchBar from "./SearchBar";
 import Search from "./Search";
-import SearchMobile from "./SearchMobile";
 import TestSearchBar from "./TestSearchbar";
 
 export default function Home(props) {
@@ -18,7 +18,7 @@ export default function Home(props) {
       <NavBar />
       <DictLang {...props} />
       <Search {...props} />
-      <SearchMobile {...props} />
+      {/* <TestSearchBar fromEng={fromEng} /> */}
     </header>
   );
 }
