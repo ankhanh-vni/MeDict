@@ -7,6 +7,7 @@ import "../style/searchmobile.css";
 
 function SearchMobile(props) {
   const fromEng = props.fromEng;
+  console.log("Rendered")
   
 //   let navigate = useNavigate();
 //   const routeChange = () =>{ 

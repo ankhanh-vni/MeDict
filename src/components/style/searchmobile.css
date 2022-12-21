@@ -8,7 +8,7 @@
     bottom: 0;
     background-color: var(--white-color);
     padding: 0 8px;
-    display: none;
+    /* display: none; */
     animation: fadeIn ease 0.1s;
     z-index: 100;
     border-bottom: 1px solid var(--blue-vinuni-color);
