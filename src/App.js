@@ -11,6 +11,8 @@ import "./components/style/responsive.css";
 
 function App() {
   const [showResult, setShowResult] = useState(false);
+  const [showSearchMobile, setShowSearchMobile] = useState(false);
+
   const [result, setResult] = useState({
     en: "",
     vn: "",
@@ -41,6 +43,8 @@ function App() {
         setFromEng={setFromEng}
         handleClick={handleClick}
         handleUnicodeToChar={unicodeToChar}
+        showSearchMobile={showSearchMobile}
+        setShowSearchMobile={setShowSearchMobile}
       />
       <Footer />
       {/* Section: search của mobile */}

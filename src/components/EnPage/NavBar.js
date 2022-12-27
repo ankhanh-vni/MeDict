@@ -1,7 +1,7 @@
 import "../style/base.css";
-// import "../style/main.css";
-// import "../style/responsive.css";
-import "../style/navbar.css";
+import "../style/main.css";
+import "../style/responsive.css";
+// import "../style/navbar.css";
 import logo from "../img/logo_vinuni_white.png";
 
 import React from "react";
