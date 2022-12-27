@@ -10,16 +10,24 @@ function DictLang({ fromEng, handleClick }) {
     <div className="header__dictlang">
       <div className="header__dictlang-item">
         {fromEng ? (
-          <h6 className="header__dictlang-item-title"  id="header__dictlang-en">English</h6>
+          <h6 className="header__dictlang-item-title" id="header__dictlang-en">
+            English
+          </h6>
         ) : (
-          <h6 className="header__dictlang-item-title" id="header__dictlang-vn">Vietnamese</h6>
+          <h6 className="header__dictlang-item-title" id="header__dictlang-vn">
+            Vietnamese
+          </h6>
         )}
       </div>
       <div className="header__dictlang-item">
         {fromEng ? (
-          <h6 className="header__dictlang-item-title" id="header__dictlang-vn">Vietnamese</h6>
+          <h6 className="header__dictlang-item-title" id="header__dictlang-vn">
+            Vietnamese
+          </h6>
         ) : (
-          <h6 className="header__dictlang-item-title"  id="header__dictlang-en">English</h6>
+          <h6 className="header__dictlang-item-title" id="header__dictlang-en">
+            English
+          </h6>
         )}
       </div>
 

@@ -4075,7 +4075,12 @@ function Search(props) {
   return (
     <div className="header__search">
       <h3 className="header__search__text">Start your search!</h3>
-      <div className="header__search__btn">
+      <div
+        className="header__search__btn"
+        onClick={() => {
+          props.setShowSearchMobile(!props.showSearchMobile);
+        }}
+      >
         <ReactSearchAutocomplete
           items={items}
           onSearch={handleOnSearch}

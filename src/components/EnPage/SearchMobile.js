@@ -1,5 +1,5 @@
 import React from "react";
-import {ReactSearchAutocomplete} from "react-search-autocomplete";
+import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import "../style/base.css";
 import "../style/main.css";
 import "../style/responsive.css";
@@ -7,13 +7,13 @@ import "../style/responsive.css";
 
 function SearchMobile(props) {
   const fromEng = props.fromEng;
-  console.log("Rendered")
-  
-//   let navigate = useNavigate();
-//   const routeChange = () =>{ 
-//     let path = "./Home"; 
-//     navigate(path);
-//   }
+  console.log("Rendered");
+
+  //   let navigate = useNavigate();
+  //   const routeChange = () =>{
+  //     let path = "./Home";
+  //     navigate(path);
+  //   }
 
   // note: the id field is mandatory
   const items = [
@@ -4082,7 +4082,12 @@ function SearchMobile(props) {
 
   return (
     <div className="search-mobile">
-      <i className="search-mobile-head-icon fas fa-angle-left" ></i>
+      <i
+        className="search-mobile-head-icon fas fa-angle-left"
+        onClick={() => {
+          props.setShowSearchMobile(!props.showSearchMobile);
+        }}
+      ></i>
       <div className="search-mobile-head">
         <ReactSearchAutocomplete
           items={items}
@@ -4098,7 +4103,7 @@ function SearchMobile(props) {
           styling={{
             lineColor: "#c92127",
             boxShadow: "none",
-            border:"none",
+            border: "none",
           }}
         />
       </div>
