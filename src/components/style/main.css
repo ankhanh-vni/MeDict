@@ -27,6 +27,8 @@
   color: var(--white-color);
   min-height: 80px;
   position: relative;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 /* LOGO */
@@ -349,11 +351,11 @@
 
 .modal_result-header {
   background-color: var(--blue-vinuni-color);
-  height: 130px;
+  height: 18vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
+  font-size: 4.0vh;
   color: var(--white-color);
   letter-spacing: 4px;
   border-radius: 12px;
@@ -384,11 +386,47 @@
   }
 }
 
+.result-img-btn {
+  color: var(--blue-vinuni-color);
+  background-color: var(--white-color);
+  border-color: var(--blue-vinuni-color) !important;
+  padding: 8px 16px;
+  font-size: 2.4vh;
+  border-radius: 10px;
+  box-shadow: 0px 6px 20px 3px rgb(31 100 255 / 30%);
+  display: block;
+  font-weight: 400;
+  border: 1px solid transparent;
+  margin: auto;
+  width: 150px;
+  margin-bottom: 24px;
+}
+
+.result-img-btn:hover {
+  color: var(--white-color);
+  background-color: var(--blue-vinuni-color);
+  cursor: pointer;
+}
+
+.result-img {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 48px;
+  margin-bottom: 0 !important;
+  display: none;
+  animation: fadeIn 1s;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
 /* Section Search Result */
 
 .section-search-result {
   /* display: none; */
   padding-bottom: 48px;
+  height: 72vh;
+  overflow-y: auto;
 }
 
 .separation_line {
@@ -401,7 +439,7 @@
 
 .result-item__term-header {
   margin: 0;
-  padding: 3.5vh;
+  padding: 3.4vh;
   text-align: center;
 }
 
@@ -417,7 +455,7 @@
 
 .result-item__term-attr {
   color: var(--blue-vinuni-color);
-  font-size: 2rem;
+  font-size: 3.0vh;
   margin: auto;
   text-align: center;
   letter-spacing: 0.2rem;
@@ -425,7 +463,7 @@
 }
 
 .result-item__term-speaker {
-  font-size: 3.6rem;
+  font-size: 3.0vh;
   text-align: center;
   padding: 16px 16px 0 16px;
 }

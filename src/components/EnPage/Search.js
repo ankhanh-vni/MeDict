@@ -1,9 +1,9 @@
 import React from "react";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import "../style/base.css";
-// import "../style/main.css";
-// import "../style/responsive.css";
-import "../style/search.css";
+import "../style/main.css";
+import "../style/responsive.css";
+// import "../style/search.css";
 
 function Search(props) {
   const fromEng = props.fromEng;

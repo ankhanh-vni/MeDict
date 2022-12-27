@@ -1,7 +1,7 @@
 import "../style/base.css";
-// import "../style/main.css";
-// import "../style/responsive.css";
-import "../style/result.css";
+import "../style/main.css";
+import "../style/responsive.css";
+// import "../style/result.css";
 
 import React from "react";
 import { useState } from "react";
@@ -36,6 +36,16 @@ export default function Result(props) {
             </header>
             <section className="section-item section-search-result">
               <div className="result-item">
+              <div class="text-center result-img-btn">
+                    Display Image
+                </div>
+                {/* <figure class="figure result-img">
+                    <img
+                      src="../SoftCon_Frontend/assets/img/acinic_img.jpg"
+                      class="img-fluid rounded"
+                      alt="Acinic"
+                    />
+                </figure> */}
                 <div className="result-item__term">
                   <div className="result-item__term-header">
                     {props.fromEng ? (
