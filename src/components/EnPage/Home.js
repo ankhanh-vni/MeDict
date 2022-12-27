@@ -1,33 +1,24 @@
 import "../style/base.css";
 import "../style/main.css";
 import "../style/responsive.css";
-// import "../style/home.css";
 
 import React from "react";
 import { useState } from "react";
-import useWindowDimensions from "../windowDim";
 
 import NavBar from "./NavBar";
 import DictLang from "./DictLang";
-import SearchBar from "./SearchBar";
 import Search from "./Search";
-import SearchMobile from "./SearchMobile";
 import TestSearchBar from "./TestSearchbar";
 
-export default function Home(props) {
-  const { height, width } = useWindowDimensions();
 
+export default function Home(props) {
+  const [items, setItems] = useState();
   return (
     <header className="header" id="searching">
       <NavBar />
       <DictLang {...props} />
-      <Search {...props} />
-      {(() => {
-        if (props.showSearchMobile && width <= 739) {
-          return <SearchMobile {...props} />;
-        }
-      })()}
-      {/* <SearchMobile {...props} /> */}
+      <Search {...props} items = {items} setItems={setItems} />
+      {/* <TestSearchBar fromEng={fromEng} /> */}
     </header>
   );
 }

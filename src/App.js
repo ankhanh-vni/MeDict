@@ -11,8 +11,6 @@ import "./components/style/responsive.css";
 
 function App() {
   const [showResult, setShowResult] = useState(false);
-  const [showSearchMobile, setShowSearchMobile] = useState(false);
-
   const [result, setResult] = useState({
     en: "",
     vn: "",
@@ -43,12 +41,10 @@ function App() {
         setFromEng={setFromEng}
         handleClick={handleClick}
         handleUnicodeToChar={unicodeToChar}
-        showSearchMobile={showSearchMobile}
-        setShowSearchMobile={setShowSearchMobile}
       />
       <Footer />
       {/* Section: search của mobile */}
-      {/* <section className="search-mobile">
+      <section className="search-mobile">
         <div className="search-mobile-head">
           <i className="search-mobile-head-icon fas fa-angle-left" />
           <input
@@ -90,7 +86,7 @@ function App() {
             </a>
           </div>
         </div>
-      </section> */}
+      </section>
       {/* Result: cửa số pop up khi bấm vào word suggestion */}
       <Result
         showResult={showResult}

@@ -1,14 +1,15 @@
+import axios from "axios";
 import React from "react";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import "../style/base.css";
 import "../style/main.css";
 import "../style/responsive.css";
-// import "../style/search.css";
+
 
 function Search(props) {
   const fromEng = props.fromEng;
   // note: the id field is mandatory
-  const items = [
+  const items1 = [
     {
       idx: 0,
       en: "a-",
@@ -4035,24 +4036,95 @@ function Search(props) {
       word_type_vn: "t\u00ednh t\u1eeb",
     },
   ];
+  const items2 = [
+    {
+        "idx": 1,
+        "eng": "ab-",
+        "vn": " r\u1eddi, xa, gi\u1ea1ng,t\u00e1ch xa",
+        "word_type": "pref.",
+        "word_type_vn": "ti\u1ec1n t\u1ed1"
+    },
+    {
+        "idx": 2,
+        "eng": "abacterial",
+        "vn": "kh\u00f4ng c\u00f3 vi khu\u1ea9n, phi khu\u1ea9n",
+        "word_type": "a",
+        "word_type_vn": "t\u00ednh t\u1eeb"
+    },
+    {
+        "idx": 3,
+        "eng": "abaptiston",
+        "vn": "khoan s\u1ecd an to\u00e0n ",
+        "word_type": "n",
+        "word_type_vn": "danh t\u1eeb"
+    },
+    {
+        "idx": 4,
+        "eng": "abaragnosis",
+        "vn": "m\u1ea5t nh\u1eadn th\u1ee9c tr\u1ecdng l\u01b0\u1ee3ng, m\u1ea5t tr\u1ecdng l\u01b0\u1ee3ng th\u1ee9c ",
+        "word_type": "n",
+        "word_type_vn": "danh t\u1eeb"
+    },
+    {
+        "idx": 5,
+        "eng": "abarthrosis",
+        "vn": "kh\u1edbp \u0111\u1ed9ng ",
+        "word_type": "n",
+        "word_type_vn": "danh t\u1eeb"
+    },
+    {
+        "idx": 6,
+        "eng": "abarticular",
+        "vn": "1. kh\u00f4ng g\u00e2y t\u1ed5n kh\u1edbp. 2.ngo\u00e0i kh\u1edbp ",
+        "word_type": "a",
+        "word_type_vn": "t\u00ednh t\u1eeb"
+    },
+    {
+        "idx": 7,
+        "eng": "abarticulation",
+        "vn": "1. sai kh\u1edbp. 2. kh\u1edbp \u0111\u1ed9ng",
+        "word_type": "n",
+        "word_type_vn": "danh t\u1eeb"
+    }
+]
 
-  const handleOnSearch = (string, results) => {
-    // console.log(string, results);
+
+  const handleOnSearch = (string) => {
+    axios
+    .get("http://127.0.0.1:5000/search_bar/", {
+      params: {word:string},
+    })
+    .then((response) => {
+      // console.log(response.data)
+      props.setItems(response.data)
+    })
   };
+
+  // const itemsReturn = () =
 
   const handleOnHover = (result) => {
     // console.log(result);
   };
 
   const handleOnSelect = (item) => {
-    props.setShowResult(!props.showResult);
-    props.setResult({
-      en: `${item.en}`,
-      vn: `${item.vn}`,
-      type: `${item.word_type}`,
-      type_vn: `${item.word_type_vn}`,
-    });
+    axios
+      .get("http://127.0.0.1:5000/audio/", {
+        params: { en_word:item.en, vi_word:item.vn},
+      })
+      .then((response) => {
+        
+      })
+
+      props.setShowResult(!props.showResult);
+      props.setResult({
+        en: `${item.en}`,
+        vn: `${item.vn}`,
+        type: `${item.word_type}`,
+        type_vn: `${item.word_type_vn}`,
+      });
   };
+
+  
 
   const handleOnFocus = () => {
     // console.log("Focused");
@@ -4065,7 +4137,7 @@ function Search(props) {
   const formatResult = (item) => {
     return (
       <>
-        <span style={{}}>
+        <span style={{ display: "block", textAlign: "left" }}>
           {fromEng ? item.en : item.vn} ({item.word_type})
         </span>
       </>
@@ -4074,15 +4146,9 @@ function Search(props) {
 
   return (
     <div className="header__search">
-      <h3 className="header__search__text">Start your search!</h3>
-      <div
-        className="header__search__btn"
-        onClick={() => {
-          props.setShowSearchMobile(!props.showSearchMobile);
-        }}
-      >
+      <div style={{ width: 400 }}>
         <ReactSearchAutocomplete
-          items={items}
+          items={props.items}
           onSearch={handleOnSearch}
           onHover={handleOnHover}
           onSelect={handleOnSelect}
@@ -4092,9 +4158,6 @@ function Search(props) {
           formatResult={formatResult}
           fuseOptions={{ keys: fromEng ? ["en"] : ["vn"] }}
           resultStringKeyName={fromEng ? ["en"] : ["vn"]}
-          styling={{
-            lineColor: "#c92127",
-          }}
         />
       </div>
     </div>

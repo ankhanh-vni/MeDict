@@ -40,7 +40,8 @@ export default function WordSuggestion(props) {
             </a>
           ))}
         </div>
-      )};
+      )}
+      ;
     </>
   );
 }

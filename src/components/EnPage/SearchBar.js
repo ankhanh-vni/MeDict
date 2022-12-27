@@ -96,11 +96,7 @@ function SearchBar(props) {
       {/* <Input className="header__search__btn-text" /> */}
       <div
         className="header__search__btn"
-        onClick={() => {
-          setOpenSearch(!openSearch);
-          props.setShowSearchMobile(!props.showSearchMobile);
-          console.log("Search clicked");
-        }}
+        onClick={() => setOpenSearch(!openSearch)}
       >
         <i className="fas fa-search header__search__btn-icon" />
         <input
