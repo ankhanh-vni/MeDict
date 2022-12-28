@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/MeDict/static/css/main.7cf8926d.css",
+    "main.js": "/MeDict/static/js/main.d17ad5f4.js",
+    "static/js/787.3a94d798.chunk.js": "/MeDict/static/js/787.3a94d798.chunk.js",
+    "static/media/background6.jpg": "/MeDict/static/media/background6.8dbf728e3373854cda22.jpg",
+    "index.html": "/MeDict/index.html",
+    "main.7cf8926d.css.map": "/MeDict/static/css/main.7cf8926d.css.map",
+    "main.d17ad5f4.js.map": "/MeDict/static/js/main.d17ad5f4.js.map",
+    "787.3a94d798.chunk.js.map": "/MeDict/static/js/787.3a94d798.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7cf8926d.css",
+    "static/js/main.d17ad5f4.js"
+  ]
+}

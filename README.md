@@ -1,2 +1,0 @@
-# MeDict
-Medical Dictionary

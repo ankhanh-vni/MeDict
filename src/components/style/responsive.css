@@ -1,0 +1,212 @@
+/* PC */
+@media (min-width: 1024px) {
+}
+
+/* Tablet & Mobile*/
+@media (max-width: 1023px) {
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .wide {
+    max-width: 740px;
+  }
+
+  .header {
+    height: 950px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .wide {
+    /* overflow: hidden; */
+    max-width: 360px;
+    padding-left: 3%;
+  }
+
+  .header__dictlang {
+    /* display: none; */
+    display: flex;
+    max-width: 250px;
+    min-width: 30px;
+  }
+
+  .header__dictlang-item {
+    font-size: 1.4rem;
+    min-width: 30px;
+    font-weight: 600;
+  }
+
+  #header__dictlang-en {
+    visibility: hidden;
+    position: relative;
+  }
+
+  #header__dictlang-en:after {
+    visibility: visible;
+    content: "EN";
+    font-size: 2.4rem;
+    position: absolute;
+    top: 0;
+    left: 20%;
+  }
+
+  #header__dictlang-vn {
+    visibility: hidden;
+    position: relative;
+  }
+
+  #header__dictlang-vn:after {
+    visibility: visible;
+    content: "VN";
+    font-size: 2.4rem;
+    position: absolute;
+    top: 0;
+    left: 20%;
+  }
+
+  .header__navbar-item {
+    display: none;
+  }
+
+  .header__logo {
+    height: 50px;
+  }
+
+  .header_logo-name {
+    font-size: 1.4rem;
+  }
+
+  .header_logo-img {
+    width: 30px;
+  }
+
+  .header__weblang-menu {
+    right: 10%;
+  }
+
+  /* Search Section */
+  .header__search__text {
+    font-size: 2.8rem;
+  }
+
+  .header__search__btn {
+    width: 320px;
+  }
+
+  .search-mobile-suggest {
+    margin: 20px auto;
+  }
+
+  .header__search-result-suggest {
+    padding: 8px 8px 8px 0px;
+  }
+
+  /* Search Result */
+  .result-img-btn {
+    font-size: 2.0vh;
+  }
+
+  .result-item__term-header h1 {
+    font-size: 3.2vh;
+  }
+
+  .result-item__term-attr {
+    font-size: 2.4vh;
+  }
+
+  .result-item__term-speaker {
+    font-size: 2.4vh;
+    padding-left: 5px;
+  }
+
+  .modal_result-container {
+    margin-left: 16px;
+    margin-right: 16px;
+    height: auto;
+  }
+
+  .section-search-result {
+    height: 65vh;
+  }
+
+  .modal_result-header {
+    font-size: 2.8vh;
+    height: 80px;
+  }
+
+  .modal_result-close {
+    font-size: 2.4rem;
+    padding: 0 6px;
+  }
+
+  /* History Section */
+  .col {
+    flex-basis: 100%;
+  }
+
+  .history-item-term {
+    font-size: 2.4rem;
+  }
+
+  .history-item-word-type {
+    font-size: 1.8rem;
+  }
+
+  /* Footer */
+
+  .footer-connection {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .footer-connection h3 {
+    font-size: 2.2rem;
+  }
+
+  .footer-contact-email {
+    width: 65%;
+    padding-left: 20px;
+  }
+
+  .footer-contact-email h3 {
+    font-size: 2.2rem;
+  }
+
+  .footer-navbar {
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+
+  .separation_line {
+    display: block;
+    max-width: 80%;
+    justify-content: center;
+  }
+}
+
+
+@media (min-height: 200px) and (max-height: 500px){
+  .modal_result-header {
+    font-size: 4vh;
+    height: 60px;
+  }
+
+  .section-item {
+    padding-top: 24px;
+  }
+
+  .section-search-result {
+    padding-bottom: 24px;
+  }
+
+  .separation_line {
+    margin: 24px auto 24px;
+  }
+
+  .result-img-btn {
+    margin-bottom: 12px;
+    font-size: 2.4vh;
+  }
+}

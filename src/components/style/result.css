@@ -1,0 +1,145 @@
+/* Modal Search Result */
+
+.modal_result {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+  }
+  
+  .modal_result.open {
+    display: flex;
+  }
+  
+  .modal_result-container {
+    background-color: var(--white-color);
+    width: 85vh;
+    max-height: 90vh;
+    position: relative;
+    border-radius: 12px;
+    animation: modalFadeIn ease 0.5s;
+  }
+  
+  .modal_result-header {
+    background-color: var(--blue-vinuni-color);
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: var(--white-color);
+    letter-spacing: 4px;
+    border-radius: 12px;
+  }
+  
+  .modal_result-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--red-vinuni-color-color);
+    padding: 0 10px;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+  .modal_result-close:hover {
+    opacity: 1;
+  }
+  
+  @keyframes modalFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-200px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+/* Section Search Result */
+
+.section-search-result {
+    /* display: none; */
+    padding-bottom: 48px;
+  }
+  
+  .separation_line {
+    margin: 32px auto 32px;
+    border-bottom: 2px solid var(--red-vinuni-color);
+    display: block;
+    max-width: 60%;
+    text-align: center;
+  }
+  
+  .result-item__term-header {
+    margin: 0;
+    padding: 3.5vh;
+    text-align: center;
+  }
+  
+  .result-item__term-header h1 {
+    font-size: 4.0vh;
+    color: var(--blue-vinuni-color);
+    display: inline-block;
+    font-family: Playfair Display, serif;
+    font-weight: 300;
+    letter-spacing: 0.4rem;
+    margin: -16px 0 16px;
+  }
+  
+  .result-item__term-attr {
+    color: var(--blue-vinuni-color);
+    font-size: 2rem;
+    margin: auto;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    opacity: 0.5;
+  }
+  
+  .result-item__term-speaker {
+    font-size: 3.6rem;
+    text-align: center;
+    padding: 16px 16px 0 16px;
+  }
+  
+
+  @media (max-width: 739px) {
+      /* Search Result */
+    .result-item__term-header h1 {
+      font-size: 3.2vh;
+    }
+
+    .result-item__term-attr {
+      font-size: 2.5vh;
+    }
+
+    .result-item__term-speaker {
+      font-size: 2.4rem;
+      padding-left: 5px;
+    }
+
+    .modal_result-container {
+      margin-left: 16px;
+      margin-right: 16px;
+      height: auto;
+    }
+
+    .modal_result-header {
+      font-size: 2.2rem;
+      height: 80px;
+    }
+
+    .modal_result-close {
+      font-size: 1.8rem;
+      padding: 0 6px;
+    }
+  }
